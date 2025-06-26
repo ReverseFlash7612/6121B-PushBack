@@ -43,12 +43,7 @@
 //#include "pros/api_legacy.h"
 #include "EZ-Template/api.hpp"
 #include "usr/globals.hpp"
-#include "usr/mogo.hpp"
 #include "usr/intake.hpp"
-#include "usr/stake.hpp"
-#include "usr/sweeper.hpp"
-#include "usr/stack.hpp"
-#include "usr/frame.hpp"
 
 // More includes here...
 #include "autons.hpp"

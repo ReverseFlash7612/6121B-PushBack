@@ -67,10 +67,10 @@ void initialize() {
 
   // Autonomous Selector using LLEMU
   ez::as::auton_selector.autons_add({
-      {"Blue\n\nBlue Negative",blueNegative},
-      {"Blue\n\nBlue Positive", bluePositive},
-      {"Red\n\nRed Negative", redNegative},
-      {"Red\n\nRed Positive", redPositive},
+      {"Blue\n\nBlue Negative",odom_boomerang_example},
+      {"Blue\n\nBlue Positive",odom_boomerang_example},
+      {"Red\n\nRed Negative",odom_boomerang_example},
+      {"Red\n\nRed Positive",odom_boomerang_example},
       {"Swing Turn\n\nSwing in an 'S' curve", swing_example},
       {"Motion Chaining\n\nDrive forward, turn, and come back, but blend everything together :D", motion_chaining},
       {"Combine all 3 movements", combining_movements},

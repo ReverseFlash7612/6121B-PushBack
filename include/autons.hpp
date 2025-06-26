@@ -19,22 +19,6 @@ void measure_offsets();
 
 void testSwing();
 
-void blueNegative();
-
 void tuningTurnPID();
-
-void testIntake();
-
-void redNegative();
-
-
-void checkColorSensing();
-
-
-void redPositive();
-
-void bluePositive();
-
-void redNegative();
 
 void tuningDrivePID();
