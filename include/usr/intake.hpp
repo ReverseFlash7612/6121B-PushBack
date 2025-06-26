@@ -2,7 +2,6 @@
 #define _INTAKE_HPP_
 
 
-void resetLadyBrownIntake();
 void toggleColorSensing(bool state);
 void setIntakeMode(bool mode);
 void setIntakeVel(int vel);
