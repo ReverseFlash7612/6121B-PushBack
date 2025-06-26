@@ -1,7 +1,5 @@
 #include "main.h"
 
-pros::Motor intake(INTAKE); // refers to the second stage of the intake
-pros::Motor firstIntake(FIRSTINTAKE); 
 pros::Optical optical(OPTICAL);
 
 bool intakeOpMode = true; // sets the intake mode and velocties for both intakes
@@ -15,78 +13,16 @@ int AUTOSENSING = 0;
 bool currentIntakeState = false;
 
 
-void resetLadyBrownIntake() {
-    pros::delay(10);
-    intake.move(OP_INTAKE_VEL);
-    pros::delay(50);
-    intake.move(0);
-}
-
 void toggleColorSensing(bool state) {
     SENSING = state;
 }
 
-void setIntakeMode(bool mode) { // sets the mode of the intake
-    intakeOpMode = mode; 
-}
-
-int autonIntakeVelocity = 0;
-int autonFirstIntakeVelocity = 0;
-
-void setIntakeVel(int vel) { // sets the velocity of the intake
-    autonIntakeVelocity = vel;
-
-}
-
-void setIntake(bool state) { // sets the intake based on the state of the bot
-    currentIntakeState = state;
-    if (state) {
-        autonIntakeVelocity = -OP_INTAKE_VEL;
-        autonFirstIntakeVelocity = -OP_FIRST_INTAKE_VEL;
-    }
-    else {
-        autonIntakeVelocity = 0;
-        autonFirstIntakeVelocity = 0;
-    }
-}
-
-void setFirstIntake(bool state) {
-    if (state) {
-        autonFirstIntakeVelocity = -OP_FIRST_INTAKE_VEL;
-    }
-    else {
-        autonFirstIntakeVelocity = 0;
-    }
-}
-
-void setSecondIntake(bool state) {
-    currentIntakeState = state;
-    if (state) {
-        autonIntakeVelocity = -OP_INTAKE_VEL;
-    }
-    else {
-        autonIntakeVelocity = 0;
-    }
-}
 
 
-void setFirstExtake(bool state) {
-    if (state) {
-        autonFirstIntakeVelocity = OP_FIRST_INTAKE_VEL;
-    }
-    else {
-        autonFirstIntakeVelocity = 0;
-    }
-}
 
-void setSecondExtake(bool state) {
-    if (state) {
-        autonIntakeVelocity = OP_INTAKE_VEL;
-    }
-    else {
-        autonIntakeVelocity = 0;
-    }
-}
+
+
+
 
 
 void setAutoSensing(int state) {
@@ -118,7 +54,6 @@ void intakeReady(bool state) {
 }
 
 void intakeTask(void* parameter) {
-    intake.tare_position();
     while (true) {
         if (!pros::competition::is_autonomous()) { // if the intake is not in the autonomous state ex: op control
             
@@ -189,7 +124,8 @@ void intakeTask(void* parameter) {
             //master.print(2,0,"Hue%8.2f",hue);
             //master.print(2,0,"Sat%8.2f",sat);
             //master.print(2,0,"Bright%8.2f",bright); 
-            
+            optical.set_led_pwm(100);
+
 
             // if the actual values from the color sensor are in the range for blue and it is sensing --- color sesning macro
             if (abs(hue-bHue) <= blueRange && abs(sat-bSat) <= satRange && abs(bright-bBright) <= brightRange && SENSING) { 

@@ -7,10 +7,6 @@
 
 
 
-
-#define INTAKE 5
-#define FIRSTINTAKE 10
-
 #define OPTICAL 14
 
 
