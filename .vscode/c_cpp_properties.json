@@ -6,7 +6,8 @@
         "${workspaceFolder}/**",
         "/Users/archa/Downloads/EZ-Template-Example-Project/6121B_Launch/include",
         "c:\\Users\\srini\\OneDrive\\Desktop\\Code Folder\\6121B Push Back\\6121B_Launch-main\\include",
-        "c:\\Users\\srini\\OneDrive\\Desktop\\Code Folder\\6121B Push Back\\6121B_PushBack_Main\\include"
+        "c:\\Users\\srini\\OneDrive\\Desktop\\Code Folder\\6121B Push Back\\6121B_PushBack_Main\\include",
+        "c:\\Users\\srini\\OneDrive\\Documents\\GitHub\\6121B-PushBack\\include"
       ],
       "defines": [
         "_DEBUG",
@@ -22,7 +23,7 @@
       ],
       "browse": {
         "path": [
-          "c:\\Users\\srini\\OneDrive\\Desktop\\Code Folder\\6121B Push Back\\6121B_PushBack_Main"
+          "c:\\Users\\srini\\OneDrive\\Documents\\GitHub\\6121B-PushBack"
         ],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
